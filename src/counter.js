@@ -19,14 +19,12 @@ const CounterApp = () =>{
     }
 
     const getJoke = async() =>{
-
         const res = await fetch('https://api.chucknorris.io/jokes/random')
         const {value} = await res.json();
         setJoke(value)
     }
 
     const getImage = async()=>{
-
         const res = await fetch('https://source.unsplash.com/random')
         const img = res.url;
         setImg(imgs=>[...imgs, img])
